@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Bintang Vazza Pratama</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#131c2e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Gradient Background and Glow Effects */
+        .gradient-bg {
+            background: linear-gradient(135deg, #7f1d1d 0%, #000000 50%, #1e3a8a 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #ef4444, #3b82f6) 1;
+        }
+        .glass-card {
+            background: rgba(19, 28, 46, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-red-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#beranda" class="text-lg sm:text-xl font-bold tracking-wider gradient-text flex items-center gap-2">
+                    <i class="fa-solid fa-star text-red-500"></i> BINTANG V.P.
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-sm font-medium hover:text-red-400 transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-sm font-medium hover:text-red-400 transition-colors">Tentang Saya</a>
+                    <a href="#skill" class="text-sm font-medium hover:text-red-400 transition-colors">Skill & Hobi</a>
+                    <a href="#github" class="text-sm font-medium hover:text-red-400 transition-colors">Panduan GitHub</a>
+                    <a href="#kontak" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-600 to-blue-600 rounded-full hover:opacity-90 shadow-lg shadow-red-900/20 transition-all transform hover:scale-105">Kontak</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-gray-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block py-2 text-base font-medium hover:text-red-400">Beranda</a>
+            <a href="#tentang" class="block py-2 text-base font-medium hover:text-red-400">Tentang Saya</a>
+            <a href="#skill" class="block py-2 text-base font-medium hover:text-red-400">Skill & Hobi</a>
+            <a href="#github" class="block py-2 text-base font-medium hover:text-red-400">Panduan GitHub</a>
+            <a href="#kontak" class="block text-center py-2.5 text-sm font-medium text-white bg-gradient-to-r from-red-600 to-blue-600 rounded-xl">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section / Beranda -->
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden gradient-bg">
+        <!-- Background Glow Elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs sm:text-sm font-medium text-gray-300 mb-6 border border-gray-700">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Terbuka untuk Kolaborasi & Pertandingan
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Halo, Saya <br><span class="gradient-text">Bintang Vazza Pratama</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-base sm:text-xl text-gray-300 mb-10 leading-relaxed">
+                Seorang pemuda asal Kota Blitar yang memiliki dedikasi tinggi dalam bidang olahraga, kompetisi futsal/sepak bola, dan dunia digital.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#kontak" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-red-600 to-blue-600 rounded-xl hover:opacity-95 shadow-lg shadow-red-900/30 transition-all transform hover:-translate-y-1">
+                    Hubungi Saya
+                </a>
+                <a href="#tentang" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-gray-200 glass-card rounded-xl hover:bg-gray-800/80 transition-all border border-gray-700">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+
+            <!-- Social / Quick Contact Chips -->
+            <div class="mt-14 flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg glass-card">
+                    <i class="fa-solid fa-location-dot text-red-500"></i>
+                    <span>Kota Blitar</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg glass-card">
+                    <i class="fa-solid fa-envelope text-blue-500"></i>
+                    <span>bintangvazza8@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="tentang" class="py-24 relative bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tentang <span class="gradient-text">Saya</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Profile Card Graphic -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group border border-gray-800 shadow-2xl">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gradient-to-br from-red-600/30 to-blue-600/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600 to-blue-600 flex items-center justify-center text-2xl font-bold text-white shadow-lg">
+                            BV
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Bintang Vazza Pratama</h3>
+                            <p class="text-sm text-gray-400">Athletes & Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Saya tinggal di Kauman, Kepanjenkidul, Kota Blitar. Keseharian saya berfokus pada aktivitas fisik, menjaga kesehatan melalui olahraga reguler, serta mengasah keterampilan motorik dan strategi lewat sepak bola, futsal, bulu tangkis, dan permainan digital.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-800">
+                        <div>
+                            <span class="block text-xs text-gray-500 uppercase tracking-wider">Domisili</span>
+                            <span class="text-sm font-semibold text-gray-200">Kepanjenkidul, Blitar</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 uppercase tracking-wider">Status</span>
+                            <span class="text-sm font-semibold text-emerald-400">Aktif & Produktif</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Details -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border border-gray-800 hover:border-red-500/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-500/10 rounded-xl text-red-500 text-xl">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Alamat Tempat Tinggal</h4>
+                                <p class="text-gray-300 text-sm">Kauman, Kepanjenkidul, Kota Blitar, Jawa Timur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-blue-500/10 rounded-xl text-blue-500 text-xl">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Email Resmi</h4>
+                                <p class="text-gray-300 text-sm">bintangvazza8@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-purple-500/10 rounded-xl text-purple-400 text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Nomor Kontak / HP</h4>
+                                <p class="text-gray-300 text-sm">085748925980</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill & Hobi Section -->
+    <section id="skill" class="py-24 relative bg-[#0e1422]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Keterampilan & <span class="gradient-text">Hobi</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">Bidang olahraga dan aktivitas yang saya kuasai dan minati sehari-hari.</p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Skill 1 -->
+                <div class="glass-card p-6 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 group border border-gray-800 hover:border-red-500/40">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500 text-2xl group-hover:bg-red-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Sepak Bola</h3>
+                    <p class="text-sm text-gray-400">Penguasaan teknik dasar lapangan hijau, kerja sama tim, dan fisik prima.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="glass-card p-6 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 group border border-gray-800 hover:border-blue-500/40">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-running"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Futsal</h3>
+                    <p class="text-sm text-gray-400">Refleks cepat, dribbling ketat, dan ketepatan taktik ruang sempit.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="glass-card p-6 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 group border border-gray-800 hover:border-red-500/40">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500 text-2xl group-hover:bg-red-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Badminton</h3>
+                    <p class="text-sm text-gray-400">Kelincahan kaki, kekuatan pukulan smash, dan fokus tinggi.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="glass-card p-6 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 group border border-gray-800 hover:border-blue-500/40">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Bermain Game</h3>
+                    <p class="text-sm text-gray-400">Strategi taktis, koordinasi digital, dan ketangkasan berpikir.</p>
+                </div>
+            </div>
+
+            <!-- Main Hobby Banner -->
+            <div class="glass-card p-8 sm:p-10 rounded-3xl relative overflow-hidden border border-gray-800">
+                <div class="absolute inset-0 bg-gradient-to-r from-red-600/10 via-transparent to-blue-600/10 pointer-events-none"></div>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                    <div>
+                        <span class="text-red-500 text-sm font-semibold uppercase tracking-widest">Hobi Utama</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Olahraga & Aktivitas Fisik</h3>
+                        <p class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base">
+                            Menjaga kebugaran tubuh melalui berbagai cabang olahraga adalah kunci produktivitas dan semangat hidup sehari-hari.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="px-5 py-3 rounded-2xl bg-red-600/20 border border-red-500/30 text-red-400 font-semibold text-sm">
+                            <i class="fa-solid fa-heart-pulse mr-2"></i> Sehat & Bugar
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Pages Guide Section -->
+    <section id="github" class="py-24 relative bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Cara Upload ke <span class="gradient-text">GitHub Pages</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">Panduan singkat bagi pemula untuk mempublikasikan website portofolio ini secara gratis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-gray-800 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 mt-2">Buat Repositori Baru</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Masuk ke akun <a href="https://github.com" target="_blank" class="text-blue-400 hover:underline">GitHub</a> Anda, buat repository baru (misal dengan nama <code class="bg-gray-800 px-1.5 py-0.5 rounded text-red-400 text-xs">portofolio</code>). Pastikan statusnya diatur ke <span class="text-emerald-400 font-medium">Public</span>.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-gray-800 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 mt-2">Simpan File sebagai index.html</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Salin kode lengkap halaman ini dan simpan dengan nama file persis <code class="bg-gray-800 px-1.5 py-0.5 rounded text-red-400 text-xs">index.html</code>. Unggah file tersebut ke dalam repository GitHub Anda menggunakan tombol <span class="text-blue-400 font-medium">Add file &gt; Upload files</span>.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-gray-800 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 mt-2">Aktifkan GitHub Pages</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Buka tab <span class="text-gray-200 font-medium">Settings</span> di repository Anda, cari menu <span class="text-gray-200 font-medium">Pages</span> pada bagian kiri. Pilih branch <code class="bg-gray-800 px-1.5 py-0.5 rounded text-red-400 text-xs">main</code> atau <code class="bg-gray-800 px-1.5 py-0.5 rounded text-red-400 text-xs">master</code>, lalu klik <span class="text-emerald-400 font-medium">Save</span>. Website Anda kini online!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-24 relative bg-[#0b0f19]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border border-gray-800 relative overflow-hidden shadow-2xl">
+                <!-- Glow Effect -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-xl mx-auto mb-12 relative z-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hubungi <span class="gradient-text">Saya</span></h2>
+                    <p class="text-gray-300 text-sm sm:text-base">Tertarik untuk berkolaborasi, bertanding, atau sekadar menyapa? Silakan hubungi kontak di bawah ini.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                    <!-- Email Box -->
+                    <a href="mailto:bintangvazza8@gmail.com" class="p-6 rounded-2xl bg-darkBg/60 border border-gray-800 hover:border-red-500/50 text-center transition-all group">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-xl group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Email</h4>
+                        <p class="text-sm font-medium text-white break-all">bintangvazza8@gmail.com</p>
+                    </a>
+
+                    <!-- Phone Box -->
+                    <a href="https://wa.me/6285748925980" target="_blank" class="p-6 rounded-2xl bg-darkBg/60 border border-gray-800 hover:border-blue-500/50 text-center transition-all group">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 text-xl group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Nomor HP / WA</h4>
+                        <p class="text-sm font-medium text-white">085748925980</p>
+                    </a>
+
+                    <!-- Address Box -->
+                    <div class="p-6 rounded-2xl bg-darkBg/60 border border-gray-800 text-center">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Alamat</h4>
+                        <p class="text-sm font-medium text-white">Kauman, Kepanjenkidul, Kota Blitar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black/80 border-t border-gray-900 text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 <span class="text-gray-300 font-medium">Bintang Vazza Pratama</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
